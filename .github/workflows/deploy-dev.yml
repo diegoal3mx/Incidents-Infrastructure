@@ -39,8 +39,8 @@ jobs:
       - name: Create SSH Keys from secrets
         run: |
           mkdir -p ./env/dev/keys
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ./env/dev/keys/712_Incident_Sever
-          echo "${{ secrets.SSH_PUBLIC_KEY }}" > ./env/dev/keys/712_Incident_Sever.pub
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ./env/dev/keys/712_Incident_Server
+          echo "${{ secrets.SSH_PUBLIC_KEY }}" > ./env/dev/keys/712_Incident_Server.pub
           chmod 777 ./env/dev/keys/712_Incident_Server
           chmod 777 ./env/dev/keys/712_Incident_Server.pub
 
