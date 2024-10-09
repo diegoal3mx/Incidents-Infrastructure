@@ -11,7 +11,7 @@ module "dev_vm" {
   mongo_url                  = var.MONGO_URL
   security_group_name        = "IN-SG-Diego"
   ssh_key_path               = "./keys/712_Incident_Server"
-  port                       = var.port
+  port                       = var.PORT
   server_name                = "IN-Server-Diego"
   location                   = "eastus2"
   mapbox_access_token        = var.MAPBOX_ACCESS_TOKEN
