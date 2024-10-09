@@ -38,7 +38,7 @@ jobs:
 
       - name: Create SSH Keys from secrets
         run: |
-          mkdir ./env/dev/keys
+          mkdir -p ./env/dev/keys
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ./env/dev/keys/712_Incident_Sever
           echo "${{ secrets.SSH_PUBLIC_KEY }}" > ./env/dev/keys/712_Incident_Sever.pub
           chmod 777 ./env/dev/keys/712_Incident_Server
@@ -54,7 +54,7 @@ jobs:
         run: terraform -chdir=env/dev init
 
       - name: Terraform format
-        run: terraform fmt -chdir=env/dev
+        run: terraform -chdir=env/dev fmt
 
       - name: Terraform plan
-        run: terraform plan -chdir=env/dev plan
+        run: terraform -chdir=env/dev plan
